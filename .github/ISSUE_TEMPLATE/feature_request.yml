@@ -1,0 +1,70 @@
+name: Feature Request
+description: Suggest an improvement or new capability for Echo
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping shape Echo. Describe the result you want, not just the button or screen you imagine.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Feature summary
+      description: Describe the idea in one clear sentence.
+      placeholder: "Example: Let users choose separate clip lengths for each game."
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Explain the situation or frustration behind the request.
+      placeholder: Tell us why this would make Echo better.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: Explain how you would like the feature to work.
+      placeholder: Describe the ideal behavior from start to finish.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Who would benefit?
+      options:
+        - Everyone
+        - Competitive players
+        - Casual players
+        - Streamers and creators
+        - Advanced users
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or workarounds
+      description: Tell us what you currently do instead, if anything.
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples, mockups, or references
+      description: Add screenshots, sketches, clips, or links that help explain the idea.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and did not find the same request.
+          required: true
+        - label: This is a feature request, not a bug report or support question.
+          required: true
