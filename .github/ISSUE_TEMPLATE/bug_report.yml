@@ -1,0 +1,87 @@
+name: Bug Report
+description: Report a reproducible problem with Echo
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Echo. Please complete every required field.
+
+  - type: input
+    id: echo-version
+    attributes:
+      label: Echo version
+      description: Find this in Echo or on the release you downloaded.
+      placeholder: "Example: 0.1.0-alpha.4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: windows-version
+    attributes:
+      label: Windows version
+      options:
+        - Windows 11
+        - Windows 10
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Explain the problem clearly.
+      placeholder: Tell us what Echo did.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: Tell us what should have happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the exact steps that cause the problem.
+      placeholder: |
+        1. Open Echo
+        2. Start a game
+        3. Press...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time
+        - Often
+        - Sometimes
+        - Once
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs, screenshots, or clips
+      description: Drag files here. Remove usernames, file paths, tokens, and other private information first.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+        - label: I removed private information from anything I attached.
+          required: true
